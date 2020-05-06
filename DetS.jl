@@ -206,7 +206,7 @@ Qb = matrix(QQ,n,1, array_mat(b))
 #S = DixonSol(A, b)
 S = solve(QA,Qb)
 s , d1 =NumDen(S)
-T = hcol(s, d1)
+@show   T = hcol(s, d1)
 T = matrix(QQ,n,n, array_mat(T))
  
 @time AT = QA*inv(T)
@@ -227,9 +227,9 @@ fl = UniCertZ(ZAT,k)
         s , d =NumDen(TS)
         T1 = hcol(s, d)  
         T1 = matrix(QQ,n,n, array_mat(T1))
-        T = T1*T
+@show   T = T1*T
         d1 *=d
-@time        AT = AT*inv(T1) 
+@time   AT = AT*inv(T1) 
   
  
         ZAT = matrix(ZZ,n,n, array_mat(AT))

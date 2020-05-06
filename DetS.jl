@@ -113,7 +113,7 @@ end
 
 
 
-#UniCert for integer matrices using Quadrstic lifting Storjohan
+#UniCert for integer matrices using Quadrstic lifting Storjohann
 # k: # of steps
 function UniCertZ(A::fmpz_mat, k::Int64)
 n = nrows(A)
